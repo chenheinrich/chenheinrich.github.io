@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>2. Creating High-Quality Code - MkLorum</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "2. Creating High-Quality Code";
+    var mkdocs_page_input_path = "code_complete/2_high_quality_code.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> MkLorum</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Code Complete</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../1_foundations/">1. Laying The Foundations</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">2. Creating High-Quality Code</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#managing_complexities">Managing Complexities</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#design_principles">Design Principles</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Clean Code</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../clean_code/overview/">Overview</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Online Resources</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../online_resources/tools/">Developer Tools</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">MkLorum</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Code Complete &raquo;</li>
+        
+      
+    
+    <li>2. Creating High-Quality Code</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="creating_high_quality_code_chapters_5_-_x">Creating High Quality Code (Chapters 5 - X)<a class="headerlink" href="#creating_high_quality_code_chapters_5_-_x" title="Permanent link">#</a></h1>
+<h2 id="managing_complexities">Managing Complexities<a class="headerlink" href="#managing_complexities" title="Permanent link">#</a></h2>
+<ul>
+<li>
+<p>The primary causes of software project failures reported in surveys are rarely technical. They are mostly poor requirements, planning or management. But when they do fail for mainly technical reasons, the primary culprit is <strong>uncontrolled complexity</strong>.</p>
+</li>
+<li>
+<p>Managing complexities is one of the most, if not the most important technical topic in software development. </p>
+</li>
+<li>
+<p><strong>No one's brain is big enough to contain an entire computer program.</strong> So one should not try to cram it all into one brain, but aim to organize the programs in such a way that we can safely focus on one part of it at a time.</p>
+</li>
+<li>
+<p>To minimize the amount of program you have to think about at once, we <strong>break big pieces into smaller ones</strong>.<br />
+For example: make code modular (the more the different components are independent the more one can focus on it one at a time); keep routines short, write programs in the problem domain, work at the highest level of abstraction. <link to Clean Code section on functions in the future></p>
+</li>
+<li>
+<p>In sum, those who compensate for the fact that <strong>humans can hold only a few things in the brain at once</strong>, will make code that's easier for themselves and others to understand and reduce errors.</p>
+</li>
+</ul>
+<h2 id="design_principles">Design Principles<a class="headerlink" href="#design_principles" title="Permanent link">#</a></h2>
+<p>How hard is it to work in your code?  </p>
+<ul>
+<li>
+<p><strong>Minimal Complexity</strong> - Avoid "clever" designs; choose "simple", "easy-to-understand" ones. Your design should let you safely ignore most parts of the program while focusing on a specific part. </p>
+</li>
+<li>
+<p><strong>Ease of Maintenance</strong> - Design it for the maintenance programmer (possibly yourself in a few years). Continually ask yourself what maintenance programmer would ask you when they try to maintain the code. Make the design self-explanatory.  </p>
+</li>
+</ul>
+<p>How easy is it to test/extend/resuse your code?</p>
+<ul>
+<li>
+<p><strong>Loose coupling</strong> - Least possible connections among different parts of the program (e.g. classes have few interconnections between them). This benefits integration/ testing/ maintenance.</p>
+</li>
+<li>
+<p><strong>Extensibility</strong> - You can enhance the system without shaking its whole structure (e.g. it's safe to change one piece of a system without affecting many others).</p>
+</li>
+<li>
+<p><strong>Reusability</strong> - You can reuse pieces of the code in other systems.  </p>
+</li>
+</ul>
+<p>How efficient is your code's internal organization?</p>
+<ul>
+<li>
+<p><strong>High fan-in</strong> - A class is being used by many other classes, e.g. lower-level utility classes. The same applies to functions.</p>
+</li>
+<li>
+<p><strong>Low-to-medium fan-out</strong> - Each class uses only a few other classes (about &lt;7); otherwise, it's an indication that the class is too complex). The same applies to functions.  </p>
+</li>
+<li>
+<p><strong>Leanness</strong> - Voltaire: "a book is finished not when nothing more can be added but when nothing more can be taken away." Be careful, extra code needs to be written/ reviewed/ tested/ considered when other code is changed -- it's not for free.  </p>
+</li>
+</ul>
+<p>How welcoming is your code to others?</p>
+<ul>
+<li>
+<p><strong>Stratification</strong> - You can view each level of decomposition without dipping into other levels.<br />
+For example, if your code uses older and poorly designed code, write new classes to interface with it, so all other parts of the system just use these new classes. This way, you can 1) compartmentalize messy code, and 2) modify only the interface when the old code is to be replaced or improved.</p>
+</li>
+<li>
+<p><strong>Standard Techniques</strong> - Use less exotic pieces since it can be intimidating for others trying to understand it. Cultivate a familiar feeling by using standard and common techniques.</p>
+</li>
+<li>
+<p><strong>Portability</strong> - You can easily move it to another environment. </p>
+</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../clean_code/overview/" class="btn btn-neutral float-right" title="Overview">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../1_foundations/" class="btn btn-neutral" title="1. Laying The Foundations"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../1_foundations/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../clean_code/overview/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

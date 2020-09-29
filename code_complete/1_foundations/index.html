@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>1. Laying The Foundations - MkLorum</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "1. Laying The Foundations";
+    var mkdocs_page_input_path = "code_complete/1_foundations.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> MkLorum</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Code Complete</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">1. Laying The Foundations</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1_measure_twice_cut_once">1. Measure Twice, Cut Once!</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#the_goal_of_preparation_risk_reduction">The Goal of Preparation: Risk Reduction</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#why_are_good_prerequisites_important">Why are good prerequisites important?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#caution">Caution</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#checklist_for_good_prerequisites">Checklist for good prerequisites</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#architecture">Architecture</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2_key_construction_decisions_draft_to_be_polished">2. Key Construction Decisions [Draft, to be polished]</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#programming_languages">Programming Languages</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#programming_conventions">Programming Conventions</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#checklist_before_you_start_constructing">Checklist before you start constructing</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#do_you_have_a">Do you have a?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#will_you">Will you ... ?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#do_you_have_the_tools_for">Do you have the tools for ?</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../2_high_quality_code/">2. Creating High-Quality Code</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Clean Code</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../clean_code/overview/">Overview</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Online Resources</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../online_resources/tools/">Developer Tools</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">MkLorum</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Code Complete &raquo;</li>
+        
+      
+    
+    <li>1. Laying The Foundations</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="laying_the_foundations_chapters_1_-_4">Laying the Foundations (Chapters 1 - 4)<a class="headerlink" href="#laying_the_foundations_chapters_1_-_4" title="Permanent link">#</a></h1>
+<h2 id="1_measure_twice_cut_once">1. Measure Twice, Cut Once!<a class="headerlink" href="#1_measure_twice_cut_once" title="Permanent link">#</a></h2>
+<h3 id="the_goal_of_preparation_risk_reduction">The Goal of Preparation: Risk Reduction<a class="headerlink" href="#the_goal_of_preparation_risk_reduction" title="Permanent link">#</a></h3>
+<ul>
+<li>
+<p>Code construction is like building a house, there are the stages of <strong>planning, construction, and testing/inspection</strong>.</p>
+</li>
+<li>
+<p>Poorly planned projects are costly not because of the material cost but because <strong>errors cause people time</strong> (e.g. moving a wall after construction; redoing the construction two or more times).</p>
+</li>
+<li>
+<p>Overarching goal of preparation is <strong>risk reduction</strong>; the most common project risks in software development are <em>poor requirements</em> and <em>poor project planning</em>.</p>
+</li>
+<li>
+<p>Illustration: building a 3 foot tower (1 meters) takes 10 beer cans, a pair of steady hands and a level ground, but building a tower 10 times higher takes much more than just 10x more beer cans. Similarly, detailed planning is required for building code just like building a house or a sky-scraper. The level of planning and the approach could be different depending on the kind of building.</p>
+</li>
+</ul>
+<h3 id="why_are_good_prerequisites_important">Why are good prerequisites important?<a class="headerlink" href="#why_are_good_prerequisites_important" title="Permanent link">#</a></h3>
+<ul>
+<li>
+<p>High-quality software comes from attention to quality in all three phases. But <strong>attention to quality at beginning</strong> (requirement and architecture design) has greater influence on product quality than attention at the end, during system testing.</p>
+</li>
+<li>
+<p>It is <strong>much more costly</strong> (estimated ~20-100x) to <strong>change a requirement after construction</strong> than earlier, closer to the time of writing the requirements.</p>
+</li>
+<li>
+<p>So be sure the requirements are right before you start.</p>
+</li>
+</ul>
+<h3 id="caution">Caution<a class="headerlink" href="#caution" title="Permanent link">#</a></h3>
+<ul>
+<li>
+<p>However, do not over-engineer! Some projects are better <strong>sequential</strong>, and some are better <strong>iterative</strong>, where the requirements are revised at each development cycle according to user feedback. <strong>Choose the right model</strong> (or combination of) for your project.</p>
+</li>
+<li>
+<p>Even in the iterative case, nevertheless, specifying well-specified pre-requisites reduces cost of the current cycle.</p>
+</li>
+<li>
+<p><strong>What if my environment allows no time for designing pre-requisites?</strong> -- Part of the job of a technical employee is to educate people around them (including their supervisors and teammates) about the software-development process (<em>so don't pretend you are coding while doing the design, or worse, skip it altogether</em>), including the importance of developing pre-requisites before constructing the code, and planning time for it.</p>
+</li>
+</ul>
+<h2 id="checklist_for_good_prerequisites">Checklist for good prerequisites<a class="headerlink" href="#checklist_for_good_prerequisites" title="Permanent link">#</a></h2>
+<h3 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">#</a></h3>
+<p><strong>Essential</strong></p>
+<ul>
+<li>
+<p>Describe <strong>inputs</strong> and <strong>outputs</strong> to the system (e.g. accuracy, range of values, format, frequency; source for inputs; destination for outputs). Put output formats in shared documentation.</p>
+</li>
+<li>
+<p>Specify all <strong>external software interfaces</strong> and all <strong>communication interfaces</strong> (e.g. protocols for error-checking, hand-shaking, communication.)</p>
+</li>
+<li>
+<p>List all the <strong>tasks</strong> the user want to perform.</p>
+</li>
+<li>
+<p>Specify <strong>data used in and output by each task</strong>.</p>
+</li>
+</ul>
+<p><strong>Optional</strong> (specify if needed): the expected response time from the user's point of view; other timing expectations, e.g. processing time, data-transfer rate, system throughput; minimum machine memory/free disk space; portability to other operating system; ability to handle changes in internal functionalities and external software interface; definition of success/failure, etc.</p>
+<p><strong>Signs of good requirements</strong>
+(1) Each requirement can be tested; (2) requirements are not specifying a design; (3) possible changes to the requirements are specified along with how likely the changes are; (4) if all the requirements are satisfied, then the product is acceptable; (5) areas where it is impossible to specify the requirements before construction are noted; (6) no requirements are impossible to implement.</p>
+<h3 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">#</a></h3>
+<p><strong>Main components:</strong> <br /></p>
+<ul>
+<li>
+<p>Describe clearly the overall organization of the program, including good architecture overview and justification. Provide motivations for all major decisions made.</p>
+</li>
+<li>
+<p>Define major building blocks, what each block is responsible for, and how they interface.</p>
+</li>
+<li>
+<p>Describe and justify critical classes (<em>use the 80/20 rule: specify 20% of the classes that make up 80% of the system's behavior</em>).</p>
+</li>
+<li>
+<p>Describe and justify data design.</p>
+</li>
+<li>
+<p>Establish technical feasibility of all parts of the system.</p>
+</li>
+</ul>
+<p><strong>Other:</strong> <br /></p>
+<ul>
+<li>
+<p>Describe how scalability can be achieved.</p>
+</li>
+<li>
+<p>Describe how it is designed to accommodate likely changes.</p>
+</li>
+<li>
+<p>Describe and justify possibly other aspects: I/O handling strategy, speed vs memory budgets for different components, error-handling strategy, security requirements, buy-vs-build decisions, how re-used code will be made to conform.</p>
+</li>
+<li>
+<p>Make sure the user interface is modularized so changes can be decoupled from the rest of the program.</p>
+</li>
+</ul>
+<hr />
+<h2 id="2_key_construction_decisions_draft_to_be_polished">2. Key Construction Decisions [Draft, to be polished]<a class="headerlink" href="#2_key_construction_decisions_draft_to_be_polished" title="Permanent link">#</a></h2>
+<h3 id="programming_languages">Programming Languages<a class="headerlink" href="#programming_languages" title="Permanent link">#</a></h3>
+<ul>
+<li>
+<p>Choosing the right programming language is important. <strong>People coding in languages they are familiar with</strong> are ~3x more productive than as beginners.</p>
+</li>
+<li>
+<p>In general, programming in higher-level languages is more efficient for development. (ratio of statement number: 6 for python, 2.5 for C++, 2 for fortran, and 1 for C). Some languages are also more expressive than others.</p>
+</li>
+<li>
+<p>Beware that some may be able to <strong>"program into the language"</strong> instead of "in a language" (having the ability to think of a concept first and then to express it in a given language), while others may not be able to do so even having the most expressive language to use (because their thoughts are being limited by the way things are done in a particular language they are used to.)</p>
+</li>
+</ul>
+<h3 id="programming_conventions">Programming Conventions<a class="headerlink" href="#programming_conventions" title="Permanent link">#</a></h3>
+<ul>
+<li>
+<p>It is important to <strong>set the programming conventions</strong> before you start constructing (because it's nearly impossible to change afterward).</p>
+</li>
+<li>
+<p>Lower-level implementations need to <strong>reflect consistency</strong> with the higher-level design (integrity), and be internally consistent. Illustration: A great design for a painting can amount to a weird collage when its different parts are being done with impressionist/ modern/ crayon styles...</p>
+</li>
+<li>
+<p><strong>Unified programming conventions</strong> means that there is <strong>less brain load on the programmers</strong> spending time in the code. Instead of spending time figuring out which variations that are results of arbitrary choice, they <strong>single out the meaningful variations</strong> much faster as a results and focus their attention on those.</p>
+</li>
+</ul>
+<h2 id="checklist_before_you_start_constructing">Checklist before you start constructing<a class="headerlink" href="#checklist_before_you_start_constructing" title="Permanent link">#</a></h2>
+<h3 id="do_you_have_a">Do you have a?<a class="headerlink" href="#do_you_have_a" title="Permanent link">#</a></h3>
+<ul>
+<li>
+<p>Procedure for <strong>naming/comments/functions/classes</strong> and other specific <strong>coding practices</strong>. (We recommend the <a href="https://google.github.io/styleguide/">Google style guide</a>; see also the
+  <a href="clean_code/overview.md">summary on Clean Code</a> upcoming on this website for general principles.)</p>
+</li>
+<li>
+<p>Procedure for <strong>Error handling</strong>; convention for <strong>class interfaces</strong>; standards for reused code; performance considerations?</p>
+</li>
+<li>
+<p><strong>Integration procedure</strong> for checking in code into the master source.
+  (We recommend using <strong>Git</strong> for version control, locking the master branch for releases only, and using the develop branch for intaking daily pull requests, where each pull request needs to be reviewed and approved by at least one person on the team, either by a peer or a supervisor, before being merged in.)</p>
+</li>
+</ul>
+<h3 id="will_you">Will you ... ?<a class="headerlink" href="#will_you" title="Permanent link">#</a></h3>
+<ul>
+<li>
+<p>Write unit tests? (Highly recommended.) Write down the test cases before coding?</p>
+</li>
+<li>
+<p>Write and perform integration tests before checking code in? (Recommended to setup automated <strong>continuous integration</strong> if you are working on a large system or working with more than one person on the code.)</p>
+</li>
+</ul>
+<h3 id="do_you_have_the_tools_for">Do you have the tools for ?<a class="headerlink" href="#do_you_have_the_tools_for" title="Permanent link">#</a></h3>
+<ul>
+<li>Editing, refactoring, syntax checking? (We highly recommend using <strong>Visual Studio Code</strong> as your editor, where you can download a lintor for syntax checking of any language, you debug concurrently in a terminal while editing code all in one window, and work remotely on a cluster as if you were on your laptop. We also recommend unifying editing tools within the team as much as possible, since some editors have different auto-formatting conventions.)</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../2_high_quality_code/" class="btn btn-neutral float-right" title="2. Creating High-Quality Code">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../about/" class="btn btn-neutral" title="About"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../about/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../2_high_quality_code/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
